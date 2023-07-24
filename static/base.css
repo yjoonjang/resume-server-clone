@@ -1,0 +1,17 @@
+.resume_footer_logo {
+    margin-top: 1rem
+}
+.resume_footer_button {
+    font-size: 0.6rem
+}
+.resume_footer {
+    text-align: center;
+    margin-top: 2rem;
+}
+.resume_header {
+    text-align: center;
+    margin: 2rem 0;
+}
+.font {
+    font-family: 'Lobster', cursive;
+}
