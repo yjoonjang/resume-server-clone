@@ -10,13 +10,7 @@
     margin: 0 auto;
 }
 
-.container a {
-    width: 45%;
-    max-width: 250px;
-}
-
 .container div {
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,7 +18,9 @@
 }
 
 .container img {
-    width: 100%;
+    width: 7rem;
+    height: 7rem;
+    object-fit: cover;
     border-radius: 1rem;
 }
 
@@ -34,7 +30,7 @@
         {% if project_list %}
             {% for project in project_list %}
                 <a href="{% url 'projectapp:detail' pk=project.pk %}">
-                    {% include 'snippets/card.html' with article=project %}
+                    {% include 'snippets/card_project.html' with project=project %}
                 </a>
             {% endfor %}
             <script src="{% static 'js/magicgrid.js' %}"></script>
