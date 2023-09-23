@@ -2,17 +2,33 @@
 
 {% block content %}
 <div>
-    <div style="text-align: center; max-width: 700px;  margin: 2rem auto; justify-content: center; align-items: center ">
-        <img style="height: 12rem; width: 12rem; border-radius: 20rem; margin-bottom: 2rem; object-fit: cover; border: .5px solid darkgray"
-             src="{{ target_project.image.url }}"
-        />
-        <h6>{{ target_project.created_at }}</h6>
-        <h1>
-            {{ target_project.title }}
-        </h1>
-        <h5>
-            {{ target_project.subtitle }}
-        </h5>
+    <div style="display: flex; flex-direction: column; text-align: center; max-width: 700px;  margin: 4rem auto 1.5rem auto; gap: 40px; ">
+        <div>
+            <img style="height: 12rem; width: 12rem; border-radius: 20rem; margin-bottom: 2rem; object-fit: cover; border: .5px solid darkgray"
+                 src="{{ target_project.image.url }}"
+            />
+            <h6>{{ target_project.created_at }}</h6>
+            <h1>
+                {{ target_project.title }}
+            </h1>
+            <h5>
+                {{ target_project.subtitle }}
+            </h5>
+        </div>
+
+        <div class="text-center">
+            {% if user.is_authenticated %}
+                {% if not subscription %}
+                    <a href="{% url 'subscribeapp:subscribe' %}?project_pk={{ target_project.pk }}" class="btn btn-primary rounded-pill px-4">
+                        Subscribe
+                    </a>
+                {% else %}
+                    <a href="{% url 'subscribeapp:subscribe' %}?project_pk={{ target_project.pk }}" class="btn btn-dark rounded-pill px-4">
+                        Unsubscribe
+                    </a>
+                {% endif %}
+            {% endif %}
+        </div>
 
         <div style="">
             {% include 'snippets/list_resume.html' with article_list=object_list %}
