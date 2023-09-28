@@ -6,7 +6,7 @@ import sys
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'resume.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'resume.settings.local')  # setting 파일 바꾼거면 이렇게 바꿔야함 - local 이면 local로
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
