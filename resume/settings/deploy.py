@@ -29,7 +29,7 @@ DATABASES = {
         "NAME": "resume",
         "USER": "yjoonjang",
         "PASSWORD": "password1234",
-        "HOST": "mariadb",  # docker의 container 이름
+        "HOST": "127.0.0.1",
         "PORT": "3306",
     }
 }
