@@ -26,10 +26,10 @@ ALLOWED_HOSTS = ['*']
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": "django",
-        "USER": "django",
+        "NAME": "resume",
+        "USER": "yjoonjang",
         "PASSWORD": "password1234",
-        "HOST": "mariadb", # docker의 container 이름
+        "HOST": "mariadb",  # docker의 container 이름
         "PORT": "3306",
     }
 }
