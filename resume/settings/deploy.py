@@ -29,7 +29,7 @@ DATABASES = {
         "NAME": "resume",
         "USER": "yjoonjang",
         "PASSWORD": "password1234",
-        "HOST": "127.0.0.1",
+        "HOST": "mariadb",
         "PORT": "3306",
     }
 }
