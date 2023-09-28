@@ -4,7 +4,9 @@ Django==4.2.5
 django-bootstrap4==23.2
 django-environ==0.11.2
 environ==1.0
+gunicorn==21.2.0
 importlib-metadata==6.8.0
+packaging==23.1
 Pillow==10.0.1
 pytz==2023.3.post1
 soupsieve==2.5
